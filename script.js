@@ -112,7 +112,15 @@ form.addEventListener("submit", async (event) => {
     if (!response.ok) throw new Error(data.message || data.error || "Error al iniciar sesión");
 
     showStatus(data.message || "Acceso concedido. Redirigiendo...", "success");
+
+    const fullName = [data.nombre, data.apellido].filter(Boolean).join(" ").trim();
+    sessionStorage.setItem("userFullName", fullName || emailInput.value.trim());
+    sessionStorage.setItem("userEmail", data.email || emailInput.value.trim());
+
     form.classList.add("success-animation");
+    setTimeout(() => {
+      window.location.href = "Bienvenido.html";
+    }, 500);
   } catch (error) {
     console.error(error);
     showStatus(error.message || "No pudimos iniciar sesión.", "error");
@@ -125,7 +133,7 @@ form.addEventListener("submit", async (event) => {
 // Opcional: manejar click de registro
 const registerBtn = document.getElementById("register");
 registerBtn.addEventListener("click", () => {
-  showStatus("Funcionalidad de registro pendiente.", "");
+  window.location.href = "CrearUsuario.html";
 });
 
 // Inicio suave en caso de rehidratación lenta

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bienvenido</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="welcome">
+  <div class="background" aria-hidden="true"></div>
+  <main class="page">
+    <section class="card" aria-label="Bienvenida">
+      <header class="card__header">
+        <div class="brand-mark" aria-hidden="true">
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
+        <div>
+          <p class="eyebrow">Acceso autorizado</p>
+          <h1 id="user-name">Bienvenido</h1>
+          <p class="subtitle" id="user-email"></p>
+        </div>
+      </header>
+
+      <div class="welcome__actions">
+        <button class="btn ghost" id="back-login">Cerrar sesión</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="welcome.js"></script>
+</body>
+</html>
