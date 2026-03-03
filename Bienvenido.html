@@ -9,8 +9,20 @@
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
-<body class="welcome">
+<body class="welcome welcome--top-right">
   <div class="background" aria-hidden="true"></div>
+  <nav class="navbar" aria-label="Navegación principal">
+    <div class="navbar__brand">
+      <span class="navbar__dot" aria-hidden="true"></span>
+      <span class="navbar__name">ClavesWeb</span>
+    </div>
+    <div class="navbar__links" role="list">
+      <a class="navbar__link" href="index.html" role="listitem">Inicio</a>
+      <a class="navbar__link" href="CrearUsuario.html" role="listitem">Crear usuario</a>
+      <a class="navbar__link" href="Generar.html" role="listitem">Generar</a>
+      <a class="navbar__link" href="Reportes.html" role="listitem">Reportes</a>
+    </div>
+  </nav>
   <main class="page">
     <section class="card" aria-label="Bienvenida">
       <header class="card__header">
